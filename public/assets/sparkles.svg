@@ -1,0 +1,23 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="sparkleGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Large sparkle center -->
+  <path d="M 100 50 L 105 90 L 100 100 L 95 90 Z" fill="#FFD700" filter="url(#sparkleGlow)" opacity="0.9"/>
+  <path d="M 50 100 L 90 95 L 100 100 L 90 105 Z" fill="#FFD700" filter="url(#sparkleGlow)" opacity="0.9"/>
+  <path d="M 100 150 L 105 110 L 100 100 L 95 110 Z" fill="#FFD700" filter="url(#sparkleGlow)" opacity="0.9"/>
+  <path d="M 150 100 L 110 95 L 100 100 L 110 105 Z" fill="#FFD700" filter="url(#sparkleGlow)" opacity="0.9"/>
+  <!-- Small sparkles -->
+  <circle cx="70" cy="70" r="4" fill="#FFB6C1" opacity="0.8"/>
+  <circle cx="130" cy="60" r="3" fill="#FFD1DC" opacity="0.8"/>
+  <circle cx="60" cy="130" r="3.5" fill="#E6E6FA" opacity="0.8"/>
+  <circle cx="140" cy="140" r="4" fill="#FFB6C1" opacity="0.8"/>
+  <circle cx="80" cy="50" r="2.5" fill="#FFD700" opacity="0.9"/>
+  <circle cx="120" cy="150" r="2.5" fill="#FFD700" opacity="0.9"/>
+</svg>
