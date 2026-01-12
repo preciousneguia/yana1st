@@ -73,8 +73,8 @@ const BackgroundMusic = () => {
         onPlay={handlePlay}
         onPause={handlePause}
       >
-        <source src="/assets/music/fairy-theme.mp3" type="audio/mpeg" />
-        <source src="/assets/music/fairy-theme.ogg" type="audio/ogg" />
+        <source src={import.meta.env.BASE_URL + 'assets/music/fairy-theme.mp3'} type="audio/mpeg" />
+        <source src={import.meta.env.BASE_URL + 'assets/music/fairy-theme.ogg'} type="audio/ogg" />
         Your browser does not support the audio element.
       </audio>
       

@@ -3,24 +3,25 @@ import React from 'react'
 const FairyFrame = ({ scrollY, currentSection, windowHeight = 800 }) => {
   // Different fairy tale character images for different sections
   // Using custom SVG illustrations - replace with your own images if desired
+  const b = import.meta.env.BASE_URL
   const characters = {
     hero: {
-      topLeft: '/assets/fairy.svg',      // Tinkerbell/Fairy
-      topRight: '/assets/sparkles.svg',  // Sparkles
-      bottomLeft: '/assets/unicorn.svg', // Unicorn
-      bottomRight: '/assets/flowers.svg', // Flowers
+      topLeft: b + 'assets/fairy.svg',      // Tinkerbell/Fairy
+      topRight: b + 'assets/sparkles.svg',  // Sparkles
+      bottomLeft: b + 'assets/unicorn.svg', // Unicorn
+      bottomRight: b + 'assets/flowers.svg', // Flowers
     },
     pictures: {
-      topLeft: '/assets/butterfly.svg',  // Butterfly
-      topRight: '/assets/stars.svg',     // Stars
-      bottomLeft: '/assets/moon.svg',    // Moon
-      bottomRight: '/assets/sparkles.svg', // Sparkles
+      topLeft: b + 'assets/butterfly.svg',  // Butterfly
+      topRight: b + 'assets/stars.svg',     // Stars
+      bottomLeft: b + 'assets/moon.svg',    // Moon
+      bottomRight: b + 'assets/sparkles.svg', // Sparkles
     },
     rsvp: {
-      topLeft: '/assets/sparkles.svg',   // Sparkles
-      topRight: '/assets/fairy.svg',      // Fairy
-      bottomLeft: '/assets/flowers.svg', // Flowers
-      bottomRight: '/assets/unicorn.svg', // Unicorn
+      topLeft: b + 'assets/sparkles.svg',   // Sparkles
+      topRight: b + 'assets/fairy.svg',      // Fairy
+      bottomLeft: b + 'assets/flowers.svg', // Flowers
+      bottomRight: b + 'assets/unicorn.svg', // Unicorn
     }
   }
 

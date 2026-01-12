@@ -36,7 +36,7 @@ const Pictures = () => {
           <div className={`picture-card ${isVisible ? 'visible' : ''}`}>
             <div className="picture-frame">
               <img
-                src="./public/assets/yana/one2.jpeg"
+                src={import.meta.env.BASE_URL + 'assets/yana/one2.jpeg'}
                 alt="Yana's photo 1" 
                 className="picture-img"
               />
@@ -46,7 +46,7 @@ const Pictures = () => {
           <div className={`picture-card ${isVisible ? 'visible' : ''}`}>
             <div className="picture-frame">
               <img
-                src="./public/assets/yana/onemid.jpeg"
+                src={import.meta.env.BASE_URL + 'assets/yana/onemid.jpeg'}
                 alt="Yana's photo 2" 
                 className="picture-img"
               />
@@ -56,7 +56,7 @@ const Pictures = () => {
           <div className={`picture-card ${isVisible ? 'visible' : ''}`}>
             <div className="picture-frame">
               <img
-                src="./public/assets/yana/one.jpeg"
+                src={import.meta.env.BASE_URL + 'assets/yana/one.jpeg'}
                 alt="Yana's photo 3" 
                 className="picture-img"
               />
