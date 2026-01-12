@@ -1,0 +1,21 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="starGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Large star center -->
+  <path d="M 100 30 L 110 80 L 100 100 L 90 80 Z" fill="#FFD700" filter="url(#starGlow)" opacity="0.9"/>
+  <path d="M 30 100 L 80 90 L 100 100 L 80 110 Z" fill="#FFD700" filter="url(#starGlow)" opacity="0.9"/>
+  <path d="M 100 170 L 110 120 L 100 100 L 90 120 Z" fill="#FFD700" filter="url(#starGlow)" opacity="0.9"/>
+  <path d="M 170 100 L 120 90 L 100 100 L 120 110 Z" fill="#FFD700" filter="url(#starGlow)" opacity="0.9"/>
+  <!-- Small stars -->
+  <path d="M 60 50 L 63 65 L 60 70 L 57 65 Z" fill="#FFB6C1" opacity="0.8"/>
+  <path d="M 140 60 L 142 72 L 140 76 L 138 72 Z" fill="#FFD1DC" opacity="0.8"/>
+  <path d="M 50 140 L 52 152 L 50 156 L 48 152 Z" fill="#E6E6FA" opacity="0.8"/>
+  <path d="M 150 150 L 152 162 L 150 166 L 148 162 Z" fill="#FFB6C1" opacity="0.8"/>
+</svg>
