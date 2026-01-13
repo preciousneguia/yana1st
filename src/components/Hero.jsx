@@ -2,8 +2,6 @@ import React from 'react'
 
 const Hero = ({ scrollY, windowHeight, animationStage }) => {
   // Calculate opacity based on scroll (fade out as we scroll down)
-  const fadeOpacity = Math.max(0, 1 - (scrollY / (windowHeight * 0.8)))
-  
   return (
     <section className="hero-section">
       <div className="section-content">
@@ -11,7 +9,7 @@ const Hero = ({ scrollY, windowHeight, animationStage }) => {
         <div 
           className={`hero-background-image ${animationStage >= 3 ? 'visible' : 'hidden'}`}
           style={{
-            opacity: animationStage >= 3 ? fadeOpacity : 0,
+            opacity: animationStage >= 3 ? 1 : 0,
           }}
         >
           <div className="hero-image-wrapper">
@@ -40,4 +38,3 @@ const Hero = ({ scrollY, windowHeight, animationStage }) => {
 }
 
 export default Hero
-

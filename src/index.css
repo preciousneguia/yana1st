@@ -60,14 +60,8 @@ body {
     background: linear-gradient(
         180deg,
         var(--pale-pink) 0%,
-        var(--peach) 20%,
-        var(--lavender) 40%,
-        var(--light-pink) 60%,
-        var(--peach) 80%,
-        var(--rose) 100%
+        var(--light-pink) 100%
     );
-    background-attachment: fixed;
-    background-size: 100% 400vh;
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
@@ -161,7 +155,7 @@ section {
     overflow: hidden;
     align-items: flex-start;
     padding-top: 15vh;
-    background-color: #c4c7e2;
+    background-color: transparent;
     transition: background-color 1.5s ease-in-out .5s;
 }
 
@@ -171,10 +165,10 @@ section {
 
 .hero-background-image {
     position: absolute;
-    top: 0;
+    top: 40vh;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 40vh);
     z-index: 0;
     transition: opacity 1s ease-in-out .5s;
     pointer-events: none;
@@ -280,7 +274,7 @@ section {
 /* Pictures Section */
 .pictures-section { background: transparent; }
 .section-title { font-family: 'Girly', 'Quicksand', Georgia, 'Times New Roman', serif; font-size: 3.4rem; text-align: center; margin-bottom: 1rem; color: var(--text-color); text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); }
-.section-subtitle { text-align: center; font-size: 1.8rem; margin-bottom: 3rem; color: var(--text-color); opacity: 0.9; }
+.section-subtitle { text-align: center; font-size: 3rem; margin-bottom: 3rem; color: var(--text-color); opacity: 0.9; }
 .pictures-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
 .picture-card { perspective: 1000px; }
 .picture-frame { position: relative; background: white; padding: 1rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; border: 3px solid var(--rose); }
@@ -316,12 +310,13 @@ section {
     .hero-title { font-size: 4rem; }
     .hero-subtitle { font-size: 2.4rem; }
     .section-title { font-size: 2.4rem; }
+    .section-subtitle { font-size: 2rem; }
     .pictures-grid { grid-template-columns: 1fr; }
     .rsvp-text { font-size: 1.8rem; }
     .rsvp-link { font-size: 1.3rem; padding: 1rem 2rem; margin-left: 0.3rem; }
     .fairy-character { width: 60px; height: 60px; }
     .music-control { width: 45px; height: 45px; font-size: 1.3rem; bottom: 1.5rem; right: 1.5rem; }
     .hero-image-wrapper { height: 100%; top: 0; left: 0; width: 100%; padding: 0 0.08rem; box-sizing: border-box; }
-    .hero-background-image { left: 0; width: 100%; top: 23vh; height: calc(100% - 30vh); padding: 0 0.08rem; box-sizing: border-box; }
+    .hero-background-image { left: 0; width: 100%; top: 35vh; height: calc(100% - 30vh); padding: 0 0.08rem; box-sizing: border-box; }
     .hero-image { width: 100%; max-width: none; height: auto; max-height: calc(100vh - 30vh); object-fit: contain; opacity: 0.96; filter: brightness(1.05) contrast(0.98) saturate(1.05); transform: scale(1.18); transition: transform 0.35s ease, opacity 0.35s ease; }
 }
