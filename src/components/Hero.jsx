@@ -14,7 +14,7 @@ const Hero = ({ scrollY, windowHeight, animationStage }) => {
         >
           <div className="hero-image-wrapper">
             <img 
-              src={import.meta.env.BASE_URL + 'assets/yana/one3.jpeg'}
+              src={import.meta.env.BASE_URL + 'assets/yana/hero.JPG'}
               alt="Yana" 
               className="hero-image"
             />

@@ -72,7 +72,7 @@ function App() {
       <Hero scrollY={scrollY} windowHeight={windowHeight} animationStage={animationStage} />
       <EventDetails />
       <Pictures />
-      <RSVP showGodparent={showGodparent} />
+      <RSVP showGodparent={showGodparent} animationStage={animationStage} />
     </div>
   )
 }
