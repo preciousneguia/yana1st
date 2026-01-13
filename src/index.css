@@ -69,7 +69,7 @@ body {
 
 #root {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 @keyframes sparkle {
@@ -106,7 +106,7 @@ section {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Hero Section */

@@ -5,6 +5,7 @@ import EventDetails from './components/EventDetails'
 import RSVP from './components/RSVP'
 import BackgroundMusic from './components/BackgroundMusic'
 import IntroAnimation from './components/IntroAnimation'
+import FairyFrame from './components/FairyFrame'
 
 function App() {
   const [scrollY, setScrollY] = useState(0)
@@ -14,8 +15,8 @@ function App() {
   useEffect(() => {
     // Check for URL parameter
     const urlParams = new URLSearchParams(window.location.search)
-    const godparentParam = urlParams.get('godparent')
-    if (godparentParam === 'true' || godparentParam === 'yes') {
+    const godparentParam = urlParams.get('gp')
+    if (godparentParam === 'y') {
       setShowGodparent(true)
     }
 
@@ -58,6 +59,9 @@ function App() {
   return (
     <div className={`app-container stage-${animationStage}`}>
       {animationStage < 4 && <IntroAnimation stage={animationStage} />}
+      
+      {/* Fairy Frame - Show after intro animation */}
+      {animationStage >= 4 && <FairyFrame />}
       
       {/* Background Music - Load after animation */}
       {animationStage === 4 && <BackgroundMusic />}
