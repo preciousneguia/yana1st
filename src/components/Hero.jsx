@@ -25,7 +25,7 @@ const Hero = ({ scrollY, windowHeight }) => {
       <div className="section-content">
         <div className="hero-content">
           <h1 className="hero-title">Yana's</h1>
-          <h2 className="hero-subtitle">Fairy First Birthday</h2>
+          <h2 className="hero-subtitle">Fairy First Birthday and Dedication</h2>
         </div>
       </div>
       

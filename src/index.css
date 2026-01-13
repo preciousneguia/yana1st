@@ -190,7 +190,7 @@ section {
     position: relative;
     overflow: hidden;
     align-items: flex-start;
-    padding-top: 12vh;
+    padding-top: 15vh;
 }
 
 .hero-background-image {
@@ -251,6 +251,19 @@ section {
         inset 0 0 40px rgba(255, 255, 255, 0.2);
 }
 
+/* Mobile: lower the hero background so subtitle sits above it */
+@media (max-width: 768px) {
+    .hero-background-image {
+        top: 30vh;
+        height: calc(100% - 30vh);
+    }
+
+    /* keep image sizing in check so it doesn't overlap subtitle area */
+    .hero-image {
+        max-height: calc(95vh - 30vh);
+    }
+}
+
 .hero-content {
     text-align: center;
     position: relative;
@@ -260,29 +273,62 @@ section {
 }
 
 .hero-title {
+    font-family: 'MagicHeart', 'Quicksand', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
     font-size: 8rem;
     color: var(--text-color);
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
     font-weight: bold;
     opacity: 0;
     animation: fadeInUp 1s ease 0.3s forwards;
-}
-
-/* Use decorative MagicHeart bold only for the hero title (Yana) */
-.hero-title {
-    font-family: 'MagicHeart', 'Quicksand', Georgia, 'Times New Roman', serif;
-    font-weight: 700;
+    text-shadow:
+        0 -3px 0 rgba(255,255,255,0.92), /* stronger top highlight */
+        0 10px 30px rgba(93,78,117,0.36), /* deeper soft drop shadow */
+        0 6px 8px rgba(0,0,0,0.18), /* darker core shadow */
+        0 1px 0 rgba(255,255,255,0.6); /* subtle extra sheen */
+    -webkit-text-stroke: 0.9px rgba(0,0,0,0.08);
+    /* keep the color readable while preserving the decorative font */
+    color: var(--text-color);
+    transform: translateZ(0) translateY(0.5px);
+    margin-bottom: 0.25rem;
 }
 
 .hero-subtitle {
     font-family: 'Girly', 'Quicksand', Georgia, 'Times New Roman', serif;
     font-size: 3.6rem;
     color: var(--text-color);
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    margin-top: 0.1rem;
+    margin-bottom: 0.6rem;
+    text-shadow:
+        0 -3px 0 rgba(255,255,255,0.95),
+        0 14px 30px rgba(93,78,117,0.45),
+        0 6px 12px rgba(0,0,0,0.22);
     font-style: italic;
     opacity: 0;
     animation: fadeInUp 1s ease 0.6s forwards;
+    -webkit-text-stroke: 0.9px rgba(0,0,0,0.14);
+    font-weight: 600;
+}
+
+/* Enforce tighter spacing between title and subtitle */
+.hero-content .hero-title {
+    margin-bottom: 0.15rem !important;
+    line-height: 1;
+}
+
+.hero-content .hero-subtitle {
+    margin-top: 0.05rem !important;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.05;
+}
+
+@media (max-width: 768px) {
+    .hero-content .hero-title {
+        margin-bottom: 0.08rem !important;
+    }
+    .hero-content .hero-subtitle {
+        margin-top: 0.02rem !important;
+        margin-bottom: 0.35rem !important;
+    }
 }
 
 .hero-date {
@@ -294,20 +340,6 @@ section {
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
 
-
-/* Embossed / pop effect for hero title */
-.hero-title {
-    /* stronger layered shadows for more pronounced depth */
-    text-shadow:
-        0 -3px 0 rgba(255,255,255,0.92), /* stronger top highlight */
-        0 10px 30px rgba(93,78,117,0.36), /* deeper soft drop shadow */
-        0 6px 8px rgba(0,0,0,0.18), /* darker core shadow */
-        0 1px 0 rgba(255,255,255,0.6); /* subtle extra sheen */
-    -webkit-text-stroke: 0.9px rgba(0,0,0,0.08);
-    /* keep the color readable while preserving the decorative font */
-    color: var(--text-color);
-    transform: translateZ(0) translateY(0.5px);
-}
 .hero-celebration-text {
     position: absolute;
     bottom: 15vh;
@@ -627,7 +659,6 @@ section {
     }
 
     /* Keep hero image behavior similar to desktop on mobile (no over-zoom / no cut-off) */
-    .hero-background-image,
     .hero-image-wrapper {
         /* preserve full area but allow image to size naturally; minimal side padding */
         height: 100%;
@@ -638,12 +669,22 @@ section {
         box-sizing: border-box;
     }
 
+    /* push the background image down so subtitles remain above it on mobile */
+    .hero-background-image {
+        left: 0;
+        width: 100%;
+        top: 23vh;
+        height: calc(100% - 30vh);
+        padding: 0 0.08rem;
+        box-sizing: border-box;
+    }
+
     .hero-image {
         width: 100%;
         max-width: none;
         height: auto;
         /* allow the image to get as large as the viewport height on mobile */
-        max-height: 100vh;
+        max-height: calc(100vh - 30vh);
         object-fit: contain;
         opacity: 0.96;
         filter: brightness(1.05) contrast(0.98) saturate(1.05);
