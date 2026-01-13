@@ -25,7 +25,7 @@ const RSVP = ({ showGodparent, animationStage }) => {
       >
         <div className="rsvp-image-wrapper">
           <img
-            src={b + 'assets/yana/one3.jpeg'}
+            src={b + 'assets/yana/rsvp.JPG'}
             alt="RSVP Background"
             className="rsvp-image"
           />
