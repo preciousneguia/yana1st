@@ -1,0 +1,77 @@
+/* Intro Animation Container */
+.intro-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Tinkerbell Container */
+.tinkerbell-container {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  opacity: 0; /* Hidden by default, animation will make it visible */
+  transform: scaleX(-1); /* Start by facing right */
+}
+
+.tinkerbell-container.stage-1 { animation: tinkerbell-path-1 2s ease-in-out forwards; }
+.tinkerbell-container.stage-2 { animation: tinkerbell-path-2 2s ease-in-out forwards; }
+.tinkerbell-container.stage-3 { animation: tinkerbell-path-3 2s ease-in-out forwards; }
+
+
+.tinkerbell-container img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Sparkle Trail */
+.sparkle {
+  position: absolute;
+  top: 50%;
+  left: 100%; /* Start behind tinkerbell (relative to container) */
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: sparkle-trail 0.8s ease-out forwards;
+}
+
+/* Keyframes for Flight Paths */
+@keyframes tinkerbell-path-1 {
+  0% { top: 10%; left: -10%; opacity: 1; transform: scaleX(1) rotate(10deg); }
+  100% { top: 15%; left: 110%; opacity: 1; transform: scaleX(1) rotate(10deg); }
+}
+
+@keyframes tinkerbell-path-2 {
+  0% { top: 80%; left: -10%; opacity: 1; transform: scaleX(1) rotate(20deg); }
+  100% { top: 20%; left: 110%; opacity: 1; transform: scaleX(1) rotate(-20deg); }
+}
+
+@keyframes tinkerbell-path-3 {
+  0% { top: 50%; left: 110%; opacity: 1; transform: scaleX(-1) rotate(-15deg); }
+  100% { top: 45%; left: -10%; opacity: 1; transform: scaleX(-1) rotate(15deg); }
+}
+
+/* Keyframes for Sparkle Trail */
+@keyframes sparkle-trail {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    box-shadow: 0 0 10px 2px white, 0 0 20px 5px #f0f, 0 0 30px 8px #0ff;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(calc(-10vw - 20px), var(--y-offset, 0px)) scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-20vw - 40px), calc(var(--y-offset, 0px) * 2)) scale(0);
+    box-shadow: none;
+  }
+}

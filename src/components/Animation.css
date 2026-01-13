@@ -1,0 +1,90 @@
+/* src/components/Animation.css */
+#tinkerbell {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    background-image: url('https://www.freeiconspng.com/uploads/tinkerbell-png-12.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fly 4s ease-in-out forwards;
+    opacity: 0;
+    z-index: 100;
+}
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: sparkle 1.5s ease-in-out forwards;
+    opacity: 0;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffef8d, 0 0 40px #ffef8d;
+}
+
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: firework 1.5s ease-out forwards;
+    opacity: 0;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffef8d, 0 0 40px #ffef8d;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(-60vw, -60vh) scale(0.5) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        transform: translate(40vw, 50vh) scale(0.7) rotate(360deg);
+    }
+    40% {
+        transform: translate(-30vw, -40vh) scale(0.6) rotate(0deg);
+    }
+    60% {
+        transform: translate(50vw, -30vh) scale(0.8) rotate(360deg);
+    }
+    80% {
+        transform: translate(-20vw, 40vh) scale(0.7) rotate(0deg);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 0) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2.5) translate(150px, -70px);
+        opacity: 0;
+    }
+}
+
+@keyframes firework {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(60);
+        opacity: 0;
+    }
+}
