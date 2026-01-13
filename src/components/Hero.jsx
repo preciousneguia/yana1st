@@ -29,10 +29,7 @@ const Hero = ({ scrollY, windowHeight }) => {
         </div>
       </div>
       
-      {/* Celebration text below image */}
-      <div className="hero-celebration-text">
-        <p className="hero-date">Join us for an enchanting celebration!</p>
-      </div>
+      {/* Celebration text moved to a separate EventDetails section */}
 
       {/* Scroll indicator moved to bottom of hero */}
       <div className="scroll-indicator">

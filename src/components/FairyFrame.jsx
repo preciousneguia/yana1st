@@ -11,6 +11,12 @@ const FairyFrame = ({ scrollY, currentSection, windowHeight = 800 }) => {
       bottomLeft: b + 'assets/unicorn.svg', // Unicorn
       bottomRight: b + 'assets/flowers.svg', // Flowers
     },
+    event: {
+      topLeft: b + 'assets/sparkles.svg',
+      topRight: b + 'assets/butterfly.svg',
+      bottomLeft: b + 'assets/flowers.svg',
+      bottomRight: b + 'assets/stars.svg',
+    },
     pictures: {
       topLeft: b + 'assets/butterfly.svg',  // Butterfly
       topRight: b + 'assets/stars.svg',     // Stars
@@ -31,7 +37,8 @@ const FairyFrame = ({ scrollY, currentSection, windowHeight = 800 }) => {
   // Get character set based on section
   const getCharacterSet = () => {
     if (currentSection === 0) return characters.hero
-    if (currentSection === 1) return characters.pictures
+    if (currentSection === 1) return characters.event
+    if (currentSection === 2) return characters.pictures
     return characters.rsvp
   }
 
