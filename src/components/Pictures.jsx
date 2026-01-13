@@ -36,7 +36,7 @@ const Pictures = () => {
           <div className={`picture-card ${isVisible ? 'visible' : ''}`}>
             <div className="picture-frame">
               <img
-                src={import.meta.env.BASE_URL + 'assets/yana/one2.jpeg'}
+                src={import.meta.env.BASE_URL + 'assets/yana/one1.JPG'}
                 alt="Yana's photo 1" 
                 className="picture-img"
               />
