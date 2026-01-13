@@ -40,13 +40,12 @@
 }
 
 :root {
-    --pink: #FFD1DC;
-    --peach: #FFE5B4;
-    --lavender: #E6E6FA;
-    --rose: #FFB6C1;
-    --light-pink: #FFE4E1;
-    --pale-pink: #FFF0F5;
-    --soft-peach: #FFE5CC;
+    --pink: #ffcae9;
+    --peach: #ffede4;
+    --lavender: #c4c7e2;
+    --rose: #fa9bcf;
+    --light-pink: #f4dbe9;
+    --pale-pink: #fff0f1;
     --text-color: #5D4E75;
     --accent-gold: #FFD700;
 }
@@ -64,8 +63,8 @@ body {
         var(--peach) 20%,
         var(--lavender) 40%,
         var(--light-pink) 60%,
-        var(--soft-peach) 80%,
-        var(--peach) 100%
+        var(--peach) 80%,
+        var(--rose) 100%
     );
     background-attachment: fixed;
     background-size: 100% 400vh;
@@ -162,7 +161,7 @@ section {
     overflow: hidden;
     align-items: flex-start;
     padding-top: 15vh;
-    background-color: #000;
+    background-color: #c4c7e2;
     transition: background-color 1.5s ease-in-out .5s;
 }
 
