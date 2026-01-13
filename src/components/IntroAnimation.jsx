@@ -36,7 +36,7 @@ const IntroAnimation = ({ stage }) => {
   return (
     <div className="intro-animation">
       <div className={`tinkerbell-container stage-${stage}`}>
-        <img src="https://www.freeiconspng.com/uploads/tinkerbell-png-12.png" alt="Tinkerbell" />
+        <img src="https://www.freeiconspng.com/uploads/tinkerbell-png-12.png" />
         {sparkles.map(sparkle => (
           <div key={sparkle.id} className="sparkle" style={sparkle.style}></div>
         ))}

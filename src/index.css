@@ -72,46 +72,6 @@ body {
     z-index: 1;
 }
 
-/* Frame decorations - positioned absolutely */
-.fairy-frame {
-    position: fixed;
-    pointer-events: none;
-    z-index: 10;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.5s ease-in-out;
-    opacity: 0;
-}
-
-.app-container.stage-4 .fairy-frame {
-    opacity: 1;
-}
-
-.fairy-frame.top-left { top: 20px; left: 20px; }
-.fairy-frame.top-right { top: 20px; right: 20px; }
-.fairy-frame.bottom-left { bottom: 20px; left: 20px; }
-.fairy-frame.bottom-right { bottom: 20px; right: 20px; }
-.fairy-frame.top-center { top: 20px; left: 50%; transform: translateX(-50%); }
-.fairy-frame.bottom-center { bottom: 20px; left: 50%; transform: translateX(-50%); }
-.fairy-frame.left-center { left: 20px; top: 50%; transform: translateY(-50%); }
-.fairy-frame.right-center { right: 20px; top: 50%; transform: translateY(-50%); }
-
-.fairy-character {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
-    animation: float 3s ease-in-out infinite;
-    display: block;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
-
-.fairy-character.sparkle {
-    animation: sparkle 2s ease-in-out infinite;
-}
-
 @keyframes sparkle {
     0%, 100% { opacity: 0.7; transform: scale(1) rotate(0deg); }
     50% { opacity: 1; transform: scale(1.1) rotate(5deg); }

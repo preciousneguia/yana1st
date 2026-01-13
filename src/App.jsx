@@ -3,7 +3,6 @@ import Hero from './components/Hero'
 import Pictures from './components/Pictures'
 import EventDetails from './components/EventDetails'
 import RSVP from './components/RSVP'
-import FairyFrame from './components/FairyFrame'
 import BackgroundMusic from './components/BackgroundMusic'
 import IntroAnimation from './components/IntroAnimation'
 
@@ -42,8 +41,6 @@ function App() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  const currentSection = Math.floor(scrollY / windowHeight)
-
   useEffect(() => {
     const stage1Timer = setTimeout(() => setAnimationStage(1), 2000) // Tinkerbell flies, reveals title
     const stage2Timer = setTimeout(() => setAnimationStage(2), 4000) // Tinkerbell flies, reveals subtitle
@@ -64,9 +61,6 @@ function App() {
       
       {/* Background Music - Load after animation */}
       {animationStage === 4 && <BackgroundMusic />}
-      
-      {/* Animated Fairy Tale Character Frames */}
-      <FairyFrame scrollY={scrollY} currentSection={currentSection} windowHeight={windowHeight} />
       
       {/* Main Content */}
       <Hero scrollY={scrollY} windowHeight={windowHeight} animationStage={animationStage} />
