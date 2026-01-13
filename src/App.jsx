@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Hero from './components/Hero'
 import Pictures from './components/Pictures'
 import EventDetails from './components/EventDetails'
-import Godparent from './components/Godparent'
 import RSVP from './components/RSVP'
 import FairyFrame from './components/FairyFrame'
 import BackgroundMusic from './components/BackgroundMusic'
@@ -73,8 +72,7 @@ function App() {
       <Hero scrollY={scrollY} windowHeight={windowHeight} animationStage={animationStage} />
       <EventDetails />
       <Pictures />
-      {showGodparent && <Godparent />}
-      <RSVP />
+      <RSVP showGodparent={showGodparent} />
     </div>
   )
 }
