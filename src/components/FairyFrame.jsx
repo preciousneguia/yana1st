@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './FairyFrame.css'
+import SparkleIcon from './SparkleIcon'
+import ButterflyIcon from './ButterflyIcon'
 
 const FairyFrame = () => {
   const [sparkles, setSparkles] = useState([])
@@ -161,7 +163,7 @@ const FairyFrame = () => {
             animationDuration: `${sparkle.duration}s`,
           }}
         >
-          ✨
+          <SparkleIcon size={20} />
         </div>
       ))}
 
@@ -175,10 +177,11 @@ const FairyFrame = () => {
             top: `${butterfly.top}%`,
             animationDelay: `${butterfly.delay}s`,
             animationDuration: `${butterfly.duration}s`,
-            fontSize: `${butterfly.size}px`,
           }}
         >
-          <div className="butterfly-body">🦋</div>
+          <div className="butterfly-body">
+            <ButterflyIcon size={butterfly.size} />
+          </div>
         </div>
       ))}
 

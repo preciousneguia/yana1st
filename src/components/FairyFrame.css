@@ -186,7 +186,6 @@
 
 .butterfly-body {
   display: inline-block;
-  animation: butterflyFlutter 0.2s ease-in-out infinite;
   filter: drop-shadow(0 0 4px rgba(255, 200, 233, 0.8));
   transform-style: preserve-3d;
   transform-origin: center;

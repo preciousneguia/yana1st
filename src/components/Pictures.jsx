@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import SparkleIcon from './SparkleIcon'
 
 const Pictures = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -40,7 +41,7 @@ const Pictures = () => {
                 alt="Yana's photo 1" 
                 className="picture-img"
               />
-              <div className="frame-decoration">✨</div>
+              <div className="frame-decoration"><SparkleIcon size={24} /></div>
             </div>
           </div>
           <div className={`picture-card ${isVisible ? 'visible' : ''}`}>
@@ -50,7 +51,7 @@ const Pictures = () => {
                 alt="Yana's photo 2" 
                 className="picture-img"
               />
-              <div className="frame-decoration">✨</div>
+              <div className="frame-decoration"><SparkleIcon size={24} /></div>
             </div>
           </div>
           <div className={`picture-card ${isVisible ? 'visible' : ''}`}>
@@ -60,7 +61,7 @@ const Pictures = () => {
                 alt="Yana's photo 3" 
                 className="picture-img"
               />
-              <div className="frame-decoration">✨</div>
+              <div className="frame-decoration"><SparkleIcon size={24} /></div>
             </div>
           </div>
         </div>

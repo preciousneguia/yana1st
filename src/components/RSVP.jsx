@@ -1,5 +1,3 @@
-import React from 'react'
-
 const RSVP = ({ showGodparent, animationStage }) => {
   const b = import.meta.env.BASE_URL
 
