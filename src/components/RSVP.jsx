@@ -1,5 +1,15 @@
+import { useState } from 'react'
+
 const RSVP = ({ showGodparent, animationStage }) => {
   const b = import.meta.env.BASE_URL
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("+96560073175").then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000) // Reset after 2 seconds
+    })
+  }
 
   return (
     <section className="rsvp-section">
@@ -8,12 +18,22 @@ const RSVP = ({ showGodparent, animationStage }) => {
           <p className="rsvp-text">
             To RSVP <span className='yes'>yes</span>, please reach us on
           </p>
-          <a
-            href="https://www.facebook.com/keazziahgemimah.eguia"
-            className="rsvp-link"
-          >
-            Facebook
-          </a>
+          <div className="links">
+            <a
+              href="https://www.facebook.com/keazziahgemimah.eguia"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rsvp-link"
+            >
+              Facebook
+            </a>
+            <button
+              onClick={handleCopy}
+              className="rsvp-link"
+            >
+              {copied ? 'Copied!' : 'WhatsApp'}
+            </button>
+          </div>
         </div>
       </div>
 
