@@ -378,7 +378,7 @@ button.rsvp-link { border: none; cursor: pointer; }
     .fairy-character { width: 60px; height: 60px; }
     .music-control { width: 45px; height: 45px; font-size: 1.3rem; bottom: 1.5rem; right: 1.5rem; }
     .hero-image-wrapper { height: 100%; top: 0; left: 0; width: 100%; padding: 0 0.08rem; box-sizing: border-box; }
-    .hero-background-image { left: 0; width: 100%; top: 35vh; height: calc(100% - 30vh); padding: 0 0.08rem; box-sizing: border-box; }
+    .hero-background-image { left: 0; width: 100%; top: 25vh; height: calc(100% - 30vh); padding: 0 0.08rem; box-sizing: border-box; }
     .hero-image {
         width: 100%;
         max-width: none;
@@ -387,7 +387,7 @@ button.rsvp-link { border: none; cursor: pointer; }
         object-fit: contain;
         opacity: 0.96;
         filter: brightness(1.05) contrast(0.98) saturate(1.05);
-        transform: scale(2) translateX(6%);
+        transform: scale(2) translateX(5.5%);
         transition: transform 0.35s ease, opacity 0.35s ease;
         mask-image: radial-gradient(ellipse 65% 55% at 60% center, black 35%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 75%, transparent 100%);
         -webkit-mask-image: radial-gradient(ellipse 65% 55% at 65% center, black 35%, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.85) 55%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0.2) 75%, transparent 100%);
