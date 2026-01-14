@@ -32,8 +32,8 @@
 /* Sparkle Trail */
 .sparkle {
   position: absolute;
-  top: 50%;
-  left: 100%; /* Start behind tinkerbell (relative to container) */
+  top: 20%;
+  left: 0%; 
   width: 8px;
   height: 8px;
   background-color: white;
@@ -49,13 +49,13 @@
 }
 
 @keyframes tinkerbell-path-2 {
-  0% { top: 38%; left: 110%; opacity: 1; transform: scaleX(-1) rotate(0deg); }
-  100% { top: 38%; left: -10%; opacity: 1; transform: scaleX(-1) rotate(0deg); }
+  0% { top: 20%; left: 110%; opacity: 1; transform: scaleX(-1) rotate(10deg); }
+  100% { top: 25%; left: -10%; opacity: 1; transform: scaleX(-1) rotate(10deg); }
 }
 
 @keyframes tinkerbell-path-3 {
-  0% { top: -10%; left: -10%; opacity: 1; transform: scaleX(1) rotate(45deg); }
-  100% { top: 110%; left: 110%; opacity: 1; transform: scaleX(1) rotate(45deg); }
+  0% { top: -10%; left: -10%; opacity: 1; transform: scaleX(1) rotate(360deg); }
+  100% { top: 110%; left: 110%; opacity: 1; transform: scaleX(1) rotate(360deg); }
 }
 
 /* Keyframes for Sparkle Trail */
