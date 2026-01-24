@@ -56,7 +56,7 @@ const RSVP = ({ showGodparent, animationStage }) => {
         {showGodparent && (
           <>
             <p className="godparent-text-rsvp">
-              P.S. We would be honored to have you as Yana's godparent to be a part of her magical journey through life.
+              P.S. We would be honored to have you as Mariana Ysabelle E. Domaloy's godparent to be a part of her magical journey through life.
             </p>
           </>
         )}

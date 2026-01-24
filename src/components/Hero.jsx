@@ -22,7 +22,7 @@ const Hero = ({ scrollY, windowHeight, animationStage }) => {
 
       <div className="section-content">
         <div className="hero-content">
-          <h1 className={`hero-title ${animationStage >= 1 ? 'visible' : ''}`}>Yana's</h1>
+          <h1 className={`hero-title ${animationStage >= 1 ? 'visible' : ''}`}>Mariana Ysabelle's</h1>
           <h2 className={`hero-subtitle ${animationStage >= 2 ? 'visible' : ''}`}>Fairy First Birthday and Dedication</h2>
         </div>
       </div>

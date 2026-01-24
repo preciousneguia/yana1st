@@ -8,17 +8,8 @@
 
 /* Load custom font placed in public/ */
 @font-face {
-    font-family: 'MagicHeart';
-    src: url('/MagicHeart.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'MagicHeart';
-    src: url('/MagicHeartBold.otf') format('opentype');
-    font-weight: 700;
+    font-family: 'SlackOnChristmas';
+    src: url('/SlackOnChristmas2.otf') format('opentype');
     font-style: normal;
     font-display: swap;
 }
@@ -178,12 +169,12 @@ section {
 }
 
 .hero-title {
-    font-family: 'MagicHeart', 'Quicksand', Georgia, 'Times New Roman', serif;
-    font-weight: 700;
+    font-family: 'SlackOnChristmas', 'Quicksand', Georgia, 'Times New Roman', serif;
+    font-weight: 600;
     font-size: 8rem;
     color: #a5e2a5;
     text-shadow: 0 -3px 0 rgba(255,255,255,0.92), 0 10px 30px rgba(93,78,117,0.36), 0 6px 8px rgba(0,0,0,0.18), 0 1px 0 rgba(255,255,255,0.6);
-    -webkit-text-stroke: 0.9px rgba(0,0,0,0.08);
+    -webkit-text-stroke: 0.9px rgba(0,0,0,0.25);
     transform: translateZ(0) translateY(0.5px);
     margin-bottom: 0.25rem;
 }
@@ -247,7 +238,7 @@ section {
 .godparent-section.hidden { display: none; }
 .godparent-content { max-width: 600px; margin: 0 auto; }
 .fairy-icon { font-size: 4rem; margin-bottom: 1rem; animation: sparkle 2s infinite; }
-.godparent-text-rsvp { font-size: 1.8rem; line-height: 1.8; text-align: center; margin: -1rem; color: var(--text-color); text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+.godparent-text-rsvp { font-size: 1.8rem; line-height: 1.8; text-align: center; margin: -1rem; color: var(--text-color); text-shadow: 0 0 8px rgba(255,255,255,0.9), 0 0 4px rgba(255,255,255,0.8); }
 .godparent-button { background: linear-gradient(135deg, var(--rose) 0%, var(--pink) 100%); color: white; border: none; padding: 1rem 2.5rem; font-size: 1.2rem; border-radius: 50px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; font-family: 'Georgia', serif; }
 .godparent-button:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
 
